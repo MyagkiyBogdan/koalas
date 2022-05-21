@@ -1,0 +1,371 @@
+:root {
+  --main-color: #05b1b1;
+  --accent-color: #52339a;
+}
+
+/* Global settings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-tc {
+  color: var(--main-color);
+}
+
+.acc-tc {
+  color: var(--accent-color);
+}
+
+.main-bgc {
+  color: var(--main-color);
+}
+
+.acc-bgc {
+  color: var(--accent-color);
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+/* Header section  */
+
+.nav-item:not(:last-child) {
+  margin-right: 100px;
+}
+
+.nav-link {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-description {
+  font-size: 13px;
+  text-align: center;
+  max-width: 120px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--main-color);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #0dcaf0;
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--main-color);
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .nav-link.active:hover {
+  color: #0dcaf0;
+}
+
+.dropdown-item {
+  font-size: 20px;
+  font-weight: 700;
+  color: #05b16f;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #0dcaf0;
+}
+
+.icon-list__header {
+  background-color: #000;
+}
+
+/* Hero */
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(5, 177, 177, 0.7)),
+      to(rgba(82, 51, 154, 0.7))
+    ),
+    url(../img/koala-bg.png);
+  background-image: -o-linear-gradient(left, rgba(5, 177, 177, 0.7), rgba(82, 51, 154, 0.7)),
+    url(../img/koala-bg.png);
+  background-image: linear-gradient(to right, rgba(5, 177, 177, 0.7), rgba(82, 51, 154, 0.7)),
+    url(../img/koala-bg.png);
+  background-size: contain;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .hero {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.hero__titile {
+  margin-bottom: 30px;
+}
+
+.play-btn {
+  background-color: var(--main-color);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: transform 250ms, background-color 250ms;
+}
+
+.play-btn:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+.play-btn__triangle {
+  margin-right: -4px;
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent var(--bs-white);
+  transition: transform 250ms;
+}
+
+.play-btn:hover .play-btn__triangle {
+  transform: scale(1.2);
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.go-button {
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  max-width: 200px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  border-radius: 22px;
+}
+
+.go-button:hover,
+.go-button:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  border-color: transparent;
+}
+
+/* About section  */
+
+.about__icon {
+  font-size: 25px;
+  color: var(--accent-color);
+}
+
+.section__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  width: 70px;
+  height: 70px;
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+}
+
+.section__low-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section__line {
+  width: 100px;
+  height: 3px;
+  margin: 0 auto 35px;
+  background-color: var(--main-color);
+}
+
+/* Facts section  */
+
+.slider__title {
+  font-size: 44px;
+  color: var(--main-color);
+  -webkit-text-stroke: 1px black;
+}
+
+.slider__text {
+  font-size: 24px;
+  font-weight: 700;
+  -webkit-text-stroke: 0.7px black;
+}
+
+.slider__hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .slider__hidden {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider__title {
+    font-size: 21px;
+  }
+  .slider__text {
+    font-size: 12px;
+    letter-spacing: 1.1;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .slider__title {
+    font-size: 34px;
+  }
+  .slider__text {
+    font-size: 20px;
+  }
+}
+
+/* Problems  */
+
+.problems__text {
+  font-size: 20px;
+  padding: 30px;
+  border: 3px solid var(--main-color);
+  border-radius: 15px;
+}
+
+/* Adapt-text  */
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion__two {
+  margin-top: 25px;
+}
+
+.accordion__three {
+  margin-top: 50px;
+}
+
+/* behaviour section */
+
+.beh__text {
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+/* Footer  */
+
+.footer {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(5, 177, 177, 0.7)),
+      to(rgba(82, 51, 154, 0.7))
+    ),
+    url(../img/koala-bg.png);
+  background-image: -o-linear-gradient(left, rgba(5, 177, 177, 0.7), rgba(82, 51, 154, 0.7)),
+    url(../img/koala-bg.png);
+  background-image: linear-gradient(to right, rgba(5, 177, 177, 0.7), rgba(82, 51, 154, 0.7)),
+    url(../img/koala-bg.png);
+  background-size: contain;
+}
+
+.icon__list {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.footer__icon:not(:last-child) {
+  margin-right: 20px;
+}
+
+.logo__nav {
+  max-width: 100px;
+}
+
+@media screen and (min-width: 400px) {
+  .logo__nav {
+    margin-right: 100px;
+  }
+}
+
+.logo__footer {
+  max-width: 150px;
+}

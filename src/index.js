@@ -10,6 +10,7 @@ const refs = {
   searchForm: document.querySelector('.search-form'),
   photoBlock: document.querySelector('.photo-card'),
   loadMore: document.querySelector('.load-more'),
+  messageToHide: document.querySelector('.message'),
 };
 
 refs.searchForm.addEventListener('submit', onClickFindPhotos);
@@ -24,6 +25,7 @@ async function onClickFindPhotos(event) {
     Notify.failure('Write what photos we should look for please');
     return;
   }
+  refs.messageToHide.style.display = 'none';
   // try {
   page = 1;
   const photosByValue = await findPhotos.fetchPhotos(
